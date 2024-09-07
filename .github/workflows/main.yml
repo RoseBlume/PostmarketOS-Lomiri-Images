@@ -42,7 +42,7 @@ jobs:
                 ls
                 #cd ../..
                 #file_path=$(sudo find . -name *.img)
-                #sudo xz -z9e ../..$file_path
+                #sudo xz -z6 ../..$file_path
                 #mv $file_path.xz ./${{ matrix.vendor }}-${{ matrix.device }}.img.xz
             - name: Upload Compressed Image
               uses: actions/upload-artifact@v3
