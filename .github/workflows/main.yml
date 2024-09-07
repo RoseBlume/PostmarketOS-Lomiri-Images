@@ -28,7 +28,7 @@ jobs:
                     mkdir -p ~/.local/bin
                     ln -s "$PWD/pmbootstrap/pmbootstrap.py" ~/.local/bin/pmbootstrap
                     pmbootstrap --version
-                    cd /home/runner/.local/var/pmbootstrap/cache_git
+                    cd /home/runner/.local/var/pmbootstrap
                     echo "cache_git exists"
                     cd ~/.local/var/pmbootstrap/cache_git/pmaports
                     git checkout feature/lomiri
