@@ -16,9 +16,9 @@ jobs:
                     - device: pinebookpro
                       vendor: pine64
                       packages: firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-weather,dialect,gnome-maps,gnome-console
-                    - device: pinenote
-                      vendor: pine64
-                      packages: firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-weather,dialect,gnome-maps,gnome-console
+                    #- device: pinenote
+                    #  vendor: pine64
+                    #  packages: firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-weather,dialect,gnome-maps,gnome-console
                     - device: rockpro64
                       vendor: pine64
                       packages: firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-weather,dialect,gnome-maps,gnome-console
