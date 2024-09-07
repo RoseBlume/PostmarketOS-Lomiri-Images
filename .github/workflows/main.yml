@@ -25,6 +25,18 @@ jobs:
                     - device: rock64
                       vendor: pine64
                       packages: firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-weather,dialect,gnome-maps,gnome-console
+                    - device: rpi4
+                      vendor: raspberry
+                      packages: firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-weather,dialect,gnome-maps,gnome-console
+                    - device: rpi0
+                      vendor: raspberry
+                      packages: firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-weather,dialect,gnome-maps,gnome-console
+                    - device: rpi1
+                      vendor: raspberry
+                      packages: firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-weather,dialect,gnome-maps,gnome-console
+                    - device: rpi3
+                      vendor: raspberry
+                      packages: firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-weather,dialect,gnome-maps,gnome-console
 
 
 
