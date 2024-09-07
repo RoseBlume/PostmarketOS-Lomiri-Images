@@ -33,7 +33,7 @@ jobs:
                     cd ~/.local/var/pmbootstrap/cache_git/pmaports
                     git checkout feature/lomiri
                     cd ../..
-                    ".local/var/pmbootstrap edge ${{ matrix.vendor }} ${{ matrix.device }} user default lomiri n ${{ matrix.packages }} n en_US ${{ matrix.vendor }}-${{ matrix.device }} y" | pmbootstrap init
+                    echo ".local/var/pmbootstrap edge ${{ matrix.vendor }} ${{ matrix.device }} user default lomiri n ${{ matrix.packages }} n en_US ${{ matrix.vendor }}-${{ matrix.device }} y" | pmbootstrap init
                     "123456" "123456" | pmbootstrap install
             - name: Compress Image
               run: |
