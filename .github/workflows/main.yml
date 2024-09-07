@@ -22,7 +22,12 @@ jobs:
               run: |
                     sudo apt-get update
                     #sudo apt-get install -y python3-pip
-                    sudo apt-get install -y pmbootstrap
+                    #sudo apt-get install -y pmbootstrap
+                    sudo apt-get install -y build-essential python3 git
+                    git clone https://gitlab.com/postmarketOS/pmbootstrap.git
+                    mkdir -p ~/.local/bin
+                    ln -s "$PWD/pmbootstrap/pmbootstrap.py" ~/.local/bin/pmbootstrap
+                    pmbootstrap --version
                     cd ~/.local/var/pmbootstrap/cache_git/pmaports
                     git checkout feature/lomiri
                     ".local/var/pmbootstrap edge ${{ matrix.vendor }} ${{ matrix.device }} user default lomiri n ${{ matrix.packages }} n en_US ${{ matrix.vendor }}-${{ matrix.device }} y" | pmbootstrap init
