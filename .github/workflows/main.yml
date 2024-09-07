@@ -1,0 +1,40 @@
+name: Install pmbootstrap
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build:
+        strategy:
+            matrix:
+                include:
+                    - device: pinephone
+                      vendor: pine64
+                      packages: chatty,firefox-esr,gnome-software
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Install pmbootstrap
+              run: |
+                    sudo apt-get update
+                    sudo apt-get install -y python3-pip
+                    sudo pip3 install pmbootstrap
+                    cd ~/.local/var/pmbootstrap/cache_git/pmaports
+                    git checkout feature/lomiri
+                    ".local/var/pmbootstrap edge ${{ matrix.vendor }} ${{ matrix.device }} user default lomiri n ${{ matrix.packages }} n en_US ${{ matrix.vendor }}-${{ matrix.device }} y" | pmbootstrap init
+                    "123456" "123456" | pmbootstrap install
+            - name: Compress Image
+              run: |
+                cd ../..
+                file_path=$(sudo find . -name *.img)
+                sudo xz -z9e $file_path
+                mv $file_path.xz ./${{ matrix.vendor }}-${{ matrix.device }}.img.xz
+            - name: Upload Compressed Image
+              uses: actions/upload-artifact@v3
+              with:
+                name: Compressed Image
+                path: ${{ matrix.vendor }}-${{ matrix.device }}.img.xz
