@@ -1,4 +1,4 @@
-name: Lomiri Images
+name: Pinetab2 Images
 on:
     push:
         branches:
