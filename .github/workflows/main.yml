@@ -28,9 +28,6 @@ jobs:
                     - device: pi4
                       vendor: raspberry
                       packages: firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-weather,dialect,gnome-maps,gnome-console
-                    - device: pi0
-                      vendor: raspberry
-                      packages: firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-weather,dialect,gnome-maps,gnome-console
                     - device: pi3
                       vendor: raspberry
                       packages: firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-weather,dialect,gnome-maps,gnome-console
