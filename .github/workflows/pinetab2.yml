@@ -30,6 +30,7 @@ jobs:
                     printf '.local/var/pmbootstrap\nedge\n${{ matrix.vendor }}\npine64-pinephone\nuser\ndefault\ngnome-mobile\n\n${{ matrix.packages }}\nn\nen_US\n${{ matrix.vendor }}-${{ matrix.device }}\ny\n123456\n123456' | pmbootstrap init
                     cd .local/var/pmbootstrap/cache_git
                     git clone https://gitlab.com/Danct12/pmaports
+                    cd pmaports
                     printf '\nedge\n${{ matrix.vendor }}\n${{ matrix.device }}\nuser\ndefault\nlomiri\n\n${{ matrix.packages }}\nn\nen_US\n${{ matrix.vendor }}-${{ matrix.device }}\ny\ny' | pmbootstrap init
                     printf '123456\n123456' | pmbootstrap install
             - name: Compress Image
