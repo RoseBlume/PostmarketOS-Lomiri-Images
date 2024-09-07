@@ -30,38 +30,10 @@ jobs:
                     pmbootstrap --version
                     #mkdir -p ~/.local/var/pmbootstrap/cache_git
                     cd ../..
-                    pmbootstrap init
-                    .local/var/pmbootstrap
-                    edge 
-                    ${{ matrix.vendor }} 
-                    ${{ matrix.device }} 
-                    user 
-                    default 
-                    gnome-mobile 
-                    n 
-                    ${{ matrix.packages }} 
-                    n 
-                    en_US 
-                    ${{ matrix.vendor }}-${{ matrix.device }} 
-                    y
-                    123456 123456
+                    printf '.local/var/pmbootstrap\nedge\n${{ matrix.vendor }}\n${{ matrix.device }}\nuser\ndefault\ngnome-mobile\n\n${{ matrix.packages }}\nn\nen_US\n${{ matrix.vendor }}-${{ matrix.device }}\ny\n123456\n123456' | pmbootstrap init
                     cd ~/.local/var/pmbootstrap/cache_git/pmaports
                     git checkout feature/lomiri
-                    pmbootstrap init
-                    .local/var/pmbootstrap
-                    edge 
-                    ${{ matrix.vendor }} 
-                    ${{ matrix.device }} 
-                    user 
-                    default 
-                    gnome-mobile 
-                    n 
-                    ${{ matrix.packages }} 
-                    n 
-                    en_US 
-                    ${{ matrix.vendor }}-${{ matrix.device }} 
-                    y
-                    123456 123456
+                    printf '.local/var/pmbootstrap\nedge\n${{ matrix.vendor }}\n${{ matrix.device }}\nuser\ndefault\nlomiri\n\n${{ matrix.packages }}\nn\nen_US\n${{ matrix.vendor }}-${{ matrix.device }}\ny\n123456\n123456' | pmbootstrap init
             - name: Compress Image
               run: |
                 cd ../..
