@@ -38,7 +38,7 @@ jobs:
             - name: Compress Image
               run: |
                 sudo cp /home/runner/work/.local/var/pmbootstrap/*/home/pmos/rootfs/${{ matrix.vendor }}-${{ matrix.device }}.img /home/runner/work/${{ matrix.vendor }}-${{ matrix.device }}.img
-                sudo xz -z9e ${{ matrix.vendor }}-${{ matrix.device }}.img
+                sudo xz -z9e /home/runner/work/${{ matrix.vendor }}-${{ matrix.device }}.img
                 ls
                 #cd ../..
                 #file_path=$(sudo find . -name *.img)
