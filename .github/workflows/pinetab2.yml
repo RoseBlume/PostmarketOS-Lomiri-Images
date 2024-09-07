@@ -1,8 +1,6 @@
 name: Pinetab2 Images
 on:
-    push:
-        branches:
-            - master
+    workflow_dispatch:
 
 jobs:
     build:
