@@ -37,12 +37,15 @@ jobs:
                     printf '123456\n123456' | pmbootstrap install
             - name: Compress Image
               run: |
-                cd ../..
-                file_path=$(sudo find . -name *.img)
-                sudo xz -z9e $file_path
-                mv $file_path.xz ./${{ matrix.vendor }}-${{ matrix.device }}.img.xz
+                sudo cp /home/runner/work/.local/var/pmbootstrap/*/home/pmos/rootfs/${{ matrix.vendor }}-${{ matrix.device }}.img /home/runner/work/${{ matrix.vendor }}-${{ matrix.device }}.img
+                sudo xz -z9e ${{ matrix.vendor }}-${{ matrix.device }}.img
+                ls
+                #cd ../..
+                #file_path=$(sudo find . -name *.img)
+                #sudo xz -z9e ../..$file_path
+                #mv $file_path.xz ./${{ matrix.vendor }}-${{ matrix.device }}.img.xz
             - name: Upload Compressed Image
               uses: actions/upload-artifact@v3
               with:
                 name: Compressed Image
-                path: ${{ matrix.vendor }}-${{ matrix.device }}.img.xz
+                path: /home/runner/work/${{ matrix.vendor }}-${{ matrix.device }}.img.xz
