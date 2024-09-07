@@ -3,8 +3,10 @@ Username: `user`
 
 Password: `123456`
 
-All images are located in releases. I am not responsible for any issues that may occur. Use these images at your own risk.
+All images are located in the "releases" folder. Please note that I am not responsible for any issues that may occur. Use these images at your own risk.
+
 **Built Device Images**
+
 1. Pinephone
 2. Pinephone Pro
 3. Pinebook Pro
@@ -13,15 +15,15 @@ All images are located in releases. I am not responsible for any issues that may
 6. RaspberryPi4
 7. RaspberryPi3
 
-Device | Tested | Starts Up | App Menu | Calls | Camera | Quick Menu 
-:--- | :---: | :---: | :---: | :---: | :---: | :---: 
-Pinephone Pro | Y | Y | Working | Untested | Untested | Buggy 
-Pinephone | N | Untested | Untested | Untested | Untested | Untested 
-PineBook Pro | N | Untested | Untested | Untested | Untested | Untested
-Rock64 | N | Untested | Untested | Untested | Untested | Untested
-RockPro64 | N | Untested | Untested | Untested | Untested | Untested
-RaspberryPi4 | N | Untested | Untested | Untested | Untested | Untested
-RaspberryPi3 | N | Untested | Untested | Untested | Untested | Untested
+| Device        | Tested | Starts Up | App Menu | Calls   | Camera   | Quick Menu |
+| ------------- | :----: | :-------: | :------: | :-----: | :------: | :--------: |
+| Pinephone Pro | Y      | Y         | Working  | Untested| Untested | Buggy      |
+| Pinephone     | N      | Untested  | Untested | Untested| Untested | Untested   |
+| PineBook Pro  | N      | Untested  | Untested | Untested| Untested | Untested   |
+| Rock64        | N      | Untested  | Untested | Untested| Untested | Untested   |
+| RockPro64     | N      | Untested  | Untested | Untested| Untested | Untested   |
+| RaspberryPi4  | N      | Untested  | Untested | Untested| Untested | Untested   |
+| RaspberryPi3  | N      | Untested  | Untested | Untested| Untested | Untested   |
 
 TODO:
 1. Pinetab2 with wifi drivers out of the box
@@ -31,4 +33,5 @@ TODO:
 5. SteamDeck-Jupiter
 6. JollaPhone
 7. Librem
-In order to contribute please fork this repository and try adding devices to the `main.yml` file if you have a device that requires special configuration please create a new job and add the required build commands.
+
+To contribute, please fork this repository and add devices to the `main.yml` file. If you have a device that requires special configuration, create a new job (preferably) or an entirely new workflow and add the necessary build commands.
