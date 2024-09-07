@@ -28,13 +28,40 @@ jobs:
                     mkdir -p ~/.local/bin
                     ln -s "$PWD/pmbootstrap/pmbootstrap.py" ~/.local/bin/pmbootstrap
                     pmbootstrap --version
-                    mkdir -p ~/.local/var/pmbootstrap/cache_git
-                    git clone https://gitlab.com/postmarketOS/pmaports ~/.local/var/pmbootstrap/cache_git/pmaports
+                    #mkdir -p ~/.local/var/pmbootstrap/cache_git
+                    cd ../..
+                    pmbootstrap init
+                    .local/var/pmbootstrap
+                    edge 
+                    ${{ matrix.vendor }} 
+                    ${{ matrix.device }} 
+                    user 
+                    default 
+                    gnome-mobile 
+                    n 
+                    ${{ matrix.packages }} 
+                    n 
+                    en_US 
+                    ${{ matrix.vendor }}-${{ matrix.device }} 
+                    y
+                    123456 123456
                     cd ~/.local/var/pmbootstrap/cache_git/pmaports
                     git checkout feature/lomiri
-                    cd ../..
-                    echo ".local/var/pmbootstrap edge ${{ matrix.vendor }} ${{ matrix.device }} user default lomiri n ${{ matrix.packages }} n en_US ${{ matrix.vendor }}-${{ matrix.device }} y" | pmbootstrap init
-                    "123456" "123456" | pmbootstrap install
+                    pmbootstrap init
+                    .local/var/pmbootstrap
+                    edge 
+                    ${{ matrix.vendor }} 
+                    ${{ matrix.device }} 
+                    user 
+                    default 
+                    gnome-mobile 
+                    n 
+                    ${{ matrix.packages }} 
+                    n 
+                    en_US 
+                    ${{ matrix.vendor }}-${{ matrix.device }} 
+                    y
+                    123456 123456
             - name: Compress Image
               run: |
                 cd ../..
