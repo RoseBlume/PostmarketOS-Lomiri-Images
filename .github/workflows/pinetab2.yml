@@ -27,7 +27,7 @@ jobs:
                     pmbootstrap --version
                     #mkdir -p ~/.local/var/pmbootstrap/cache_git
                     cd ../..
-                    printf '.local/var/pmbootstrap\nedge\n${{ matrix.vendor }}\npine64-pinephone\nuser\ndefault\ngnome-mobile\n\n${{ matrix.packages }}\nn\nen_US\n${{ matrix.vendor }}-${{ matrix.device }}\ny\n123456\n123456' | pmbootstrap init
+                    printf '.local/var/pmbootstrap\nedge\npine64\npinephone\nuser\ndefault\ngnome-mobile\n\n${{ matrix.packages }}\nn\nen_US\n${{ matrix.vendor }}-${{ matrix.device }}\ny\n123456\n123456' | pmbootstrap init
                     cd .local/var/pmbootstrap/cache_git
                     git clone https://gitlab.com/Danct12/pmaports --branch=pinetab2
                     cd pmaports
