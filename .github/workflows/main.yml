@@ -28,7 +28,8 @@ jobs:
                     mkdir -p ~/.local/bin
                     ln -s "$PWD/pmbootstrap/pmbootstrap.py" ~/.local/bin/pmbootstrap
                     pmbootstrap --version
-                    pmbootstrap init
+                    cd /home/runner/.local/var/pmbootstrap/cache_git
+                    echo "cache_git exists"
                     cd ~/.local/var/pmbootstrap/cache_git/pmaports
                     git checkout feature/lomiri
                     ".local/var/pmbootstrap edge ${{ matrix.vendor }} ${{ matrix.device }} user default lomiri n ${{ matrix.packages }} n en_US ${{ matrix.vendor }}-${{ matrix.device }} y" | pmbootstrap init
