@@ -1,8 +1,6 @@
-name: Install pmbootstrap
+name: Lomiri Images
 on:
-    push:
-        branches:
-            - main
+    workflow_dispatch:
 
 jobs:
     build:
@@ -51,5 +49,5 @@ jobs:
             - name: Upload Compressed Image
               uses: actions/upload-artifact@v3
               with:
-                name: Compressed Image
+                name: Compressed Images
                 path: /home/runner/work/${{ matrix.vendor }}-${{ matrix.device }}.img.xz
