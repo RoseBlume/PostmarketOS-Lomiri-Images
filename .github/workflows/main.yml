@@ -9,10 +9,10 @@ jobs:
                 include:
                     - device: pinephone
                       vendor: pine64
-                      packages: chatty,firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-contacts,gnome-weather,calls,phosh-antispam,dialect,gnome-maps,gnome-console
+                      packages: chatty,firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-contacts,gnome-weather,calls,phosh-antispam,dialect,gnome-maps,gnome-console,networkmanager,modemmanager,konsole
                     - device: pinephonepro
                       vendor: pine64
-                      packages: chatty,firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-contacts,gnome-weather,calls,phosh-antispam,dialect,gnome-maps,gnome-console
+                      packages: chatty,firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-contacts,gnome-weather,calls,phosh-antispam,dialect,gnome-maps,gnome-console,konsole,networkmanager,modemmanager
                     - device: pinebookpro
                       vendor: pine64
                       packages: firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-weather,dialect,gnome-maps,gnome-console
