@@ -10,7 +10,7 @@ jobs:
                 include:
                     - device: pinetab2
                       vendor: pine64
-                      packages: chatty,firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-contacts,gnome-weather,calls,phosh-antispam,dialect,gnome-maps,gnome-console
+                      packages: chatty,firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-contacts,gnome-weather,calls,phosh-antispam,dialect,gnome-maps,gnome-console,networkmanager
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
