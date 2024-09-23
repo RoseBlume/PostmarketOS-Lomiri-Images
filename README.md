@@ -2,7 +2,7 @@
 Username: `user`
 
 Password: `123456`
-
+If there are any applications you wish to include please open an issue and explain why you wish to have this application included.
 All images are located in the "releases" folder. Please note that I am not responsible for any issues that may occur. Use these images at your own risk.
 
 **Built Device Images**
