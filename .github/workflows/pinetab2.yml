@@ -1,4 +1,4 @@
-name: Pinetab2 Images
+name: Unstable Devices
 on:
     push:
     workflow_dispatch:
@@ -9,6 +9,9 @@ jobs:
             matrix:
                 include:
                     - device: pinetab2
+                      vendor: pine64
+                      packages: chatty,firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-contacts,gnome-weather,calls,phosh-antispam,dialect,gnome-maps,gnome-console,networkmanager
+                    - device: pinenote
                       vendor: pine64
                       packages: chatty,firefox-esr,gnome-software,flatpak,gnome-software-plugin-flatpak,gnome-contacts,gnome-weather,calls,phosh-antispam,dialect,gnome-maps,gnome-console,networkmanager
         runs-on: ubuntu-latest
