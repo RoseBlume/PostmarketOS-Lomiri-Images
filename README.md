@@ -18,7 +18,7 @@ All images are located in the "releases" folder. Please note that I am not respo
 | Device        | Tested | Starts Up | App Menu | Calls   | Camera   | Quick Menu |
 | ------------- | :----: | :-------: | :------: | :-----: | :------: | :--------: |
 | Pinephone Pro | Y      | Y         | Working  | Untested| Untested | Buggy      |
-| Pinephone     | N      | Untested  | Untested | Untested| Untested | Untested   |
+| Pinephone     | N      | Y         | Y        | Untested| Untested | Y          |
 | PineBook Pro  | N      | Untested  | Untested | Untested| Untested | Untested   |
 | Rock64        | N      | Untested  | Untested | Untested| Untested | Untested   |
 | RockPro64     | N      | Untested  | Untested | Untested| Untested | Untested   |
